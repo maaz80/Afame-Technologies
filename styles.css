@@ -6,7 +6,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("BG-For-Port-Edit.png");
+  background-image: url("images/BG-For-Port-Edit.png");
   background-position: inherit;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -51,7 +51,8 @@ body {
   display: flex;
   gap: 20px;
 }
-.container span{
+
+.container span {
   font-family: "Poetsen One", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -86,11 +87,6 @@ header h1 {
 
 .NameofPro {
   color: #fff;
-  border: 2px solid black;
-  padding: 3px;
-  border-radius: 10px;
-  background-color: black;
-  padding-bottom: 6px;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -131,11 +127,13 @@ header h1 {
 #about .container {
   width: 50%;
 }
-.SK{
+
+.SK {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .SK:hover {
   color: #007bff;
   transition: 1s ease-in-out;
@@ -158,7 +156,15 @@ header h1 {
   font-weight: 50;
   font-style: normal;
 }
-.descOfPro{
+#projects{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.descOfPro {
   color: white;
   font-family: "Poetsen One", sans-serif;
   font-weight: 50;
@@ -199,7 +205,8 @@ header h1 {
   transition: transform 0.3s ease;
   box-shadow: 0px 10px 10px black;
 }
-.iconbox{
+
+.iconbox {
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -215,15 +222,77 @@ header h1 {
 }
 
 /* Projects Section Styles */
-#projects {
-  padding: 50px;
+.container4 {
   display: flex;
-  flex-direction: column;
-  gap: 50px;
-  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
 }
-.proimg{
-  box-shadow: 0px 10px 10px black;
+
+.container4 .project {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem black;
+  overflow: hidden;
+  display: flex;
+  height: 300px;
+  width: 450px;
+}
+
+.project img {
+  width: 100%;
+  transition: .5s ease;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project .text {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .1), black);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+
+.project:hover .text {
+  transform: translateY(0);
+}
+
+.text h3 {
+  font-size: 33px;
+}
+
+.text p {
+  font-size: 20px;
+  padding: 0 50px;
+
+}
+
+.text a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+}
+
+.text a i {
+  font-size: 2rem;
+  color: black;
 }
 
 .container3 {
@@ -235,42 +304,16 @@ header h1 {
   gap: 20px;
 }
 
-.container4 {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
- 
-}
+
 
 .pro {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.project {
-  text-align: center;
-  width: 25%;
-  border: 2px solid var(--primary-color);
-  padding: 30px;
-  border-radius: 20px;
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 98, 255)); 
-  box-shadow: 0px 10px 30px black;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
 
 /* Contact Section Styles */
 #contact {
@@ -285,7 +328,8 @@ header h1 {
   color: #007bff;
   transition: 1s ease-in-out;
 }
-.container6{
+
+.container6 {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -322,10 +366,20 @@ footer a:hover {
   animation: movingText 10s linear infinite;
 }
 
+.Social{
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Social i{
+  font-size: 30px;
+}
+
 @media only screen and (max-width: 1000px) {
   body {
     background-position: center;
-    background-image: url("mobilebg.png");
+    background-image: url("images/mobilebg.png");
     background-attachment: fixed;
     background-repeat: inherit;
   }
@@ -393,19 +447,33 @@ footer a:hover {
     position: absolute;
     top: -20px;
     right: 0;
-    width: 90%;
+    width: 70%;
+    margin-right: 70px;
     height: 140%;
     background: #e0e7e3;
     animation: showright 4s ease forwards;
     animation-delay: 1.5s;
   }
 
-  .project {
-    width: 90%;
+  .container4 .project {
+    height: 226px;
+    width: 350px;
+  }
+  .text a {
+    width: 50px;
+    height: 50px;
   }
 
   .pro {
     font-size: 1.5rem;
+  }
+
+  .text h3 {
+    font-size: 26px;
+  }
+
+  .text p {
+    font-size: 13px;
   }
 
   .icons {
