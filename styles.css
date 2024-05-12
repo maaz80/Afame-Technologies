@@ -447,8 +447,9 @@ footer a:hover {
     position: absolute;
     top: -20px;
     right: 0;
-    width: 70%;
-    margin-right: 70px;
+    width: 80%;
+    margin-right: 50px;
+    border-radius: 90px;
     height: 140%;
     background: #e0e7e3;
     animation: showright 4s ease forwards;
